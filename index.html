@@ -19,10 +19,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,600i,700,700i,800,800i&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800&display=swap">
         <base target="_blank">
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5S334R9');</script>
-<!-- End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5S334R9');</script>
+        <!-- End Google Tag Manager -->
         <style>
             .btn-hover {
                 background:#21ebb0;
@@ -190,9 +189,9 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item"><a class="nav-link active" href="#top">Home<span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item"><a class="nav-link" href="#podcast">Podcasts</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" id="podcast-header" href="#podcast">Podcasts</a></li>
+                            <li class="nav-item"><a class="nav-link" id="blog-header" href="#blog">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" id="contact-header" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -795,16 +794,16 @@
         <script src="https://www.themetrading.net/html/potato/js/validate.js"></script> 
         <script src="https://www.themetrading.net/html/potato/js/custom.js"></script> 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156349032-1"></script>	
-	<script>
-	  	window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156349032-1"></script>	
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  		gtag('config', 'UA-156349032-1');
-	</script>
+            gtag('config', 'UA-156349032-1');
+        </script>
 
-	<script>
+        <script>
             $(".nav-link").on('click',function(event)
             {
                 if(this.hash!==""){event.preventDefault();
