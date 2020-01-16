@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="PM Hub - Personal Portfolio"><meta name="keywords" content="agency, blog, business, creative, cv, developer, personal, portfolio, resume">
+        <meta name="author" content="root">
+        <title>PM Hub - Personal Portfolio</title>
+        <link rel="shortcut icon" href="https://www.themetrading.net/html/potato/images/favicon/favicon-1.ico">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/default.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/design-style-1/style.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/design-style-1/color.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/default-animation.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://www.themetrading.net/html/potato/css/responsive.css">
+        <link rel="stylesheet" href="https://pmhub.s3.us-east-2.amazonaws.com/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pmhub.s3.us-east-2.amazonaws.com/fonts/flaticon/flaticon.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,600i,700,700i,800,800i&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,700i,800&display=swap">
+        <base target="_blank">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5S334R9');</script>
+<!-- End Google Tag Manager -->
+        <style>
+            .btn-hover {
+                background:#21ebb0;
+                color: #000000 !important;
+                border: 2px solid #000000;
+            }
+            .btn-hover:hover {
+                background:#ffffff;
+                color: #000000;
+            }
+            .image-box__background,
+            .image-box__overlay 
+            {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .image-box__background {
+                --image-url: url('https://pmhub.s3.us-east-2.amazonaws.com/images/background3.jpg');
+                background: var(--image-url) center center no-repeat;
+                background-size: cover;
+                z-index: 1
+            }
+            .image-box__overlay {
+                background: rgba(0, 0, 0, 0);
+                z-index: 2;
+            }
+            .image-box__content {
+                position: relative;
+                z-index: 3;
+                color: white;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .skill-bar {
+                margin-bottom: 28px;
+            }
+            .progress-mark span,
+            .progress-title-holder {
+                color: #5e5e5e;
+                font-family: Montserrat,sans-serif;
+                font-weight: 700;
+            }
+            .progress-title {
+                z-index: 100;
+            }
+            .progress-wrapper {
+                width: 100%;
+                z-index: 10;
+            }
+            .progress-title-holder {
+                position: relative;
+                font-size: 14px;
+                /* text-transform: uppercase; */
+            }
+            .progress-mark {
+                position: absolute;
+                bottom: 0;
+                transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+            }
+            .progress-content, .progress-outter {
+                height: 7px;
+                border-radius: 3px;
+            }
+            .progress-mark:after {
+                background: #484848 none repeat scroll 0 0;
+                border-radius: 50%;
+                -webkit-box-shadow: 0 0 0 4px rgba(72, 72, 72, 0.5);
+                box-shadow: 0 0 0 4px rgba(72, 72, 72, 0.5);
+                content: "";
+                height: 14px;
+                position: absolute;
+                right: 7px;
+                bottom: -10px;
+                width: 14px;
+                z-index: 999;
+            }
+            .progress-content, .progress-outter {
+                height: 7px;
+                border-radius: 3px;
+            }
+            .progress-outter {
+                background-color: #c8c8c8;
+            }
+            .progress-content {
+                background-color: #484848;
+                width: 0%;
+            }
+            .color-primary, .color-primary-a a {
+                color: #21ebb0;
+            }
+            .font-change{
+                font-style: unset;
+                font-family: Montserrat,sans-serif;
+                color: black;
+                text-align: justify;
+            }
+            .about-image{
+                margin-top: 4%;
+            }
+            .icon-animation, .controls .control.mixitup-control-active, .controls .control:hover, .blog-title:hover, .date-comment, .client i, .socal-media ul li a:hover, .btn-link {
+                color: #21ebb0;
+            }
+
+            .line:before, .line:after, .dots, .controls .control, .socal-media ul li a {
+                background-color: #21ebb0 !important;
+            }
+             hr.pLine {
+                border: 1px solid #21ebb0;
+                width: 100%;
+            }
+            .content_element {
+                margin-bottom: 1.5em;
+            }
+            .byline__prefix {
+                font-style: italic;
+                font-weight: 600;
+                font-size: small;
+                color: black;
+                text-decoration: underline !important;
+            }
+            .tile-content {
+                font-family: monospace;
+                color: #000000;
+            }
+            .tile-content:hover {
+                font-family: monospace;
+                color: #5e5e5e;
+            }
+            .embed-responsive iframe {
+                height: 100%;
+            }
+            .modal-height {
+                height: 100%;
+            }
+            .pLogo {
+                font-style: unset;
+                font-family: monospace;
+                font-size: -webkit-xxx-large;
+            }
+            /* .main-nav {
+                height: 10%;
+            } */
+            .p-0 {
+                margin-top: 1%;
+            }
+        </style>
+    </head>
+    <body id="top">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5S334R9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+        <a href="#" id="scroll" style="display: none;"><span></span></a>
+        <header class="main-nav nav-on-banner">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0 w-100">
+                    <a class="navbar-brand p-0" href="#top"><span class="pLogo">PM.</span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="#top">Home<span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#podcast">Podcasts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#blog">Blogs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="main-banner">
+            <div class="image-box__background"></div>
+            <div class="image-box__overlay"></div>
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-md-12 col-lg-12">
+                        <!-- <a class="btn mt-30 btn-dark btn-hover" href="https://drive.google.com/file/d/0ByPQguO2LlR0S3dtZm9RajdBZTVOUlVYWnpDTnNGTGl3VHk4/view" target="_blank">Download CV</a> -->
+                        <div class="banner-content color-black">
+                            <h4 class="banner-title color-black my-15">Hi! I'm Sachin.</h4><h1> An Exponential Product Manager </h1>
+                            <p style="font-style:oblique">The intersection point among business, technology and user experience (UX).</p> 
+                            <a class="btn mt-30 btn-dark btn-hover" href="https://drive.google.com/file/d/0ByPQguO2LlR0S3dtZm9RajdBZTVOUlVYWnpDTnNGTGl3VHk4/view" target="_blank">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="about-image">
+                           <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/about1.jpg" alt="image">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="about-details">
+                            <div class="inner-title pb-30">
+                                <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1" style="margin-left: unset !important;">About</h5>
+                                <h2 class="inner-bottom-title color-black banner-title">Some Talk of My Self</h2>
+                            </div>
+                            <p class="mb-15 font-change">Currently I'm wearing the hat of a product manager. The work includes create roadmaps, market/competition research, strategy, product integration and product marketing.</p>
+                            <p class="mb-15 font-change">A collaborative leader with excellent problem-solving skills driving results in early stage technology with real passion for the customer, great technical depth, principled thinking, well-honed product judgement, a stubborn refusal to settle, bold innovation, high design bar and mentality of starting with customer first and working backward.</p>
+                            <div class="skill-bar" data-percentage="95%">
+								<h4 class="progress-title-holder">
+									<span class="progress-title">Customer Advocacy</span>
+									<span class="progress-wrapper">
+										<span class="progress-mark" style="left: 95%;">
+											<span class="percent">95%</span>
+										</span>
+									</span>
+								</h4>
+								<div class="progress-outter">
+									<div class="progress-content" style="width: 95%;"></div>
+								</div>
+							</div>
+                            <div class="skill-bar" data-percentage="90%">
+								<h4 class="progress-title-holder">
+									<span class="progress-title">Grittiness</span>
+									<span class="progress-wrapper">
+										<span class="progress-mark" style="left: 90%;">
+											<span class="percent">90%</span>
+										</span>
+									</span>
+								</h4>
+								<div class="progress-outter">
+									<div class="progress-content" style="width: 90%;"></div>
+								</div>
+                            </div>
+                            <div class="skill-bar" data-percentage="90%">
+								<h4 class="progress-title-holder">
+									<span class="progress-title">Leadership</span>
+									<span class="progress-wrapper">
+										<span class="progress-mark" style="left: 90%;">
+											<span class="percent">90%</span>
+										</span>
+									</span>
+								</h4>
+								<div class="progress-outter">
+									<div class="progress-content" style="width: 90%;"></div>
+								</div>
+                            </div>
+                            <div class="skill-bar" data-percentage="85%">
+								<h4 class="progress-title-holder">
+									<span class="progress-title">Business Accumen</span>
+									<span class="progress-wrapper">
+										<span class="progress-mark" style="left: 85%;">
+											<span class="percent">85%</span>
+										</span>
+									</span>
+								</h4>
+								<div class="progress-outter">
+									<div class="progress-content" style="width: 85%;"></div>
+								</div>
+                            </div>
+                            <div class="skill-bar" data-percentage="85%">
+								<h4 class="progress-title-holder">
+									<span class="progress-title">User Experience</span>
+									<span class="progress-wrapper">
+										<span class="progress-mark" style="left: 85%;">
+											<span class="percent">85%</span>
+										</span>
+									</span>
+								</h4>
+								<div class="progress-outter">
+									<div class="progress-content" style="width: 85%;"></div>
+								</div>
+                            </div>
+                            <div class="mt-15">
+                                <a class="btn btn-dark btn-hover mr-3" href="https://drive.google.com/file/d/0ByPQguO2LlR0S3dtZm9RajdBZTVOUlVYWnpDTnNGTGl3VHk4/view" target="_blank">Download CV</a>
+                                <a class="btn btn-dark btn-hover" id="send">Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="bg-lightgray py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="section-title text-center m-auto pb-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1">What I Do As</h5>
+                            <h2 class="text-uppercase mb-0 color-black">Product Manager</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                        <i class="flaticon-think"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Brainstorm</h4>
+                                    <p class="font-change">Conceptualize and launch new products and features which should focus on customers/users needs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                        <i class="flaticon-analytics"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Research</h4>
+                                    <p class="font-change">Various researches e.g. market, competetion, user, etc. help me to raise confidence to make decsion.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                        <i class="flaticon-numbered"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Prioritization</h4>
+                                    <p class="font-change">Prioritise based on effort and impact and deliver customer value in the quickest possible way.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                        <i class="flaticon-decision"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Decision Making</h4>
+                                    <p class="font-change">Data-driven approach takes on a whole new level when it combines from different sources for product.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                    <i class="flaticon-statistics"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Analysing Growth</h4>
+                                    <p class="font-change">Measure business impact and product direction of product and features with different metrics.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="service-item text-center bg-white py-50 px-30 mt-30">
+                                    <div class="icon-animation flat-font-40">
+                                        <div class="dot-round">
+                                            <div class="dots"></div>
+                                        </div> 
+                                        <i class="flaticon-experiment"></i>
+                                    </div>
+                                    <h4 class="my-20 color-black">Experimentation</h4>
+                                    <p class="font-change">Perform various experiments e.g. A/B Testing to make product viable, stable and customer-centric.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section class="py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="section-title text-center m-auto pb-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1">Why I Choose</h5>
+                            <h2 class="text-uppercase mb-0 color-black">Product Management</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="choose-me mt-30">
+                            <h3 class="color-black mb-15 text-capitalize">
+                                <!-- I give pure 
+                                <span class="color-primary">design</span> and 
+                                <span class="color-primary">hand code</span>  -->
+                                Because My <span class="color-primary">moto</span> is <span class="color-primary">customer satisfaction.</span>
+                            </h3>
+                            <p class="font-change">After several years of experience as software developer, I decided didn't want to be doing the same thing when I will be 30 years old. As I started considering different positions, I was continually drawn to the product manager (PM) role because of following traits:</p>
+                            <ul class="mt-30">
+                                <li class="mb-20">
+                                    <h4 class="color-black mb-2 letter-spacing-1">
+                                        <span class="color-primary">1.</span> Vision and Discipline
+                                    </h4> 
+                                    <p class="font-change">I have to know what’s important to solve, who am I solving it for, why is it worth solving, and how do I measure success?</p>
+                                </li>
+                                <li class="mb-20">
+                                    <h4 class="color-black mb-2 letter-spacing-1">
+                                        <span class="color-primary">2.</span> Story Teller
+                                    </h4>
+                                    <p class="font-change">I used to be the best story teller to your team, to your customers and to the market. They should know what I’m building, and more importantly, why I’m building it.</p>
+                                </li>
+                                <li class="mb-20">
+                                    <h4 class="color-black mb-2 letter-spacing-1">
+                                        <span class="color-primary">3.</span> Win with a Team
+                                    </h4>
+                                    <p class="font-change">A collaborative mindset is key. I am responsible for defining the requirements with cross functional teams to design, implement, test, refine and deploy this new addition to the roadmap.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="choose-img mt-30">
+                            <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/important.svg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <div class="background-1 py-60">
+            <div class="container">
+                <div class="row fact-counter">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="achivement d-inline-block w-100 bg-gradient count wow fadeIn" data-wow-delay="300ms" data-wow-duration="500ms">
+                            <div class="round position-relative p-30 bg-white">
+                                 <span class="count-num color-black" data-speed="3000" data-stop="4">4</span>
+                            </div>
+                            <h5 class="color-black">Years of Experience</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="achivement r-mt-30 d-inline-block w-100 bg-gradient count wow fadeIn" data-wow-delay="300ms" data-wow-duration="500ms">
+                            <div class="round position-relative p-30 bg-white">
+                                <span class="count-num color-black" data-speed="3000" data-stop="4">4</span>
+                            </div>
+                            <h5 class="color-black">Organizations</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <div class="achivement r-mt-30 d-inline-block w-100 bg-gradient count wow fadeIn" data-wow-delay="300ms" data-wow-duration="500ms">
+                            <div class="round position-relative p-30 bg-white"> 
+                                <span class="count-num color-black" data-speed="3000" data-stop="500000">500000</span>
+                            </div>
+                            <h5 class="color-black">Happy Customers</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="portfolio" class="portfolio-one bg-lightgray py-80">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="section-title text-center m-auto pb-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1">Domain Expertise</h5>
+                            <h2 class="text-uppercase mb-0 color-black">Industries</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="column mix development design col-md-6 col-lg-3">
+                                <div class="row">
+                                    <div class="project">
+                                        <a href="https://www.coss.io/"  target="_blank">
+                                            <figure>
+                                                <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/industry1.jpg" alt="image"/> 
+                                                <figcaption>
+                                                    <h5 class="project-title">Build B-2-C product to manage fund in decentralized way and trade as well.</h5>
+                                                    <h6 class="project-category">Blockchain</h6>
+                                                </figcaption> 
+                                            </figure> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column mix mockup development col-md-6 col-lg-3">
+                                <div class="row">
+                                    <div class="project">
+                                        <a href="https://www.instantpay.in/"  target="_blank">
+                                            <figure> <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/industry3.jpg" alt="image"/> 
+                                                <figcaption>
+                                                    <h5 class="project-title">Develop B2B SaaS platform for various financial services to help SMBs.</h5>
+                                                    <h6 class="project-category">Fintech</h6>
+                                                </figcaption> 
+                                            </figure> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column mix design photography mockup col-md-6 col-lg-3">
+                                <div class="row">
+                                    <div class="project"> 
+                                        <a href="https://www.yaantra.com/"  target="_blank">
+                                            <figure> 
+                                                <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/industry5.jpg" alt="image"/> 
+                                                <figcaption>
+                                                    <h5 class="project-title">Designe e-commerce platform for refurbished and old Mobile devices and accessories .</h5>
+                                                    <h6 class="project-category">E-Commerce</h6>
+                                                    <!-- <div class="project-zoom"></div>  -->
+                                                </figcaption> 
+                                            </figure> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column mix design development col-md-6 col-lg-3">
+                                <div class="row">
+                                    <div class="project"> 
+                                        <a href="https://www.g8.net/"  target="_blank">
+                                        <figure> 
+                                            <img src="https://pmhub.s3.us-east-2.amazonaws.com/images/industry4.jpg" alt="image"/> 
+                                            <figcaption>
+                                                <h5 class="project-title">Design Smart Home serivces controlled through various interfaces.</h5>
+                                                <h6 class="project-category">Internet of Things</h6>
+                                                <!-- <div class="project-zoom"></div>  -->
+                                            </figcaption> 
+                                        </figure> 
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <section id="podcast" class="py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="section-title text-center m-auto pb-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1">Latest Collection</h5>
+                            <h2 class="text-uppercase mb-0 color-black">Podcasts</h2>
+                        </div>
+                        <div class="content_element">
+                            <hr class="pLine">
+                            <h4>
+                                <a href="#" data-toggle="modal" data-target="#modalPodcast1"><span class="tile-content"> Scaling Experimentation is Product Management.<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://www.thisisproductmanagement.com/" target="_blank" class="byline__prefix">This is Product Management.</a>
+                            </div>
+                            <hr class="pLine">
+                            <div class="modal fade" id="modalPodcast1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body mb-0 p-0 modal-height">
+                                            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                                <iframe width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/573602280%3Fsecret_token%3Ds-ZJW0t&amp;color=%230556d2&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <!-- <input id="valueLink1" type="hidden" value="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/573602280%3Fsecret_token%3Ds-ZJW0t&amp;color=%230556d2&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"> -->
+                                            <!-- <a class="btn btn-dark btn-hover mr-3" id="copyLink1" data-clipboard-demo="" data-clipboard-action="copy" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">Copy Link</a> -->
+                                            <a class="btn btn-dark btn-hover mr-3" data-dismiss="modal">Close</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_element">
+                            <h4>
+                                <a href="#" data-toggle="modal" data-target="#modalPodcast2"><span class="tile-content"> How Yelp drove down churn by building up customer success.<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://www.intercom.com" target="_blank" class="byline__prefix">Intercom</a>
+                            </div>
+                            <hr class="pLine">
+                            <div class="modal fade" id="modalPodcast2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body mb-0 p-0 modal-height">
+                                            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                                <iframe style="width: 100%; height: 200px; border: 0 none;" src="https://art19.com/shows/828246d1-e75c-4b41-a882-671aff845a93/episodes/01fe3ec9-3f54-460f-81a9-930c57b981b5/embed?theme=dark-custom&amp;primary_color=%239e0ff6" scrolling="no"></iframe>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <!-- <input id="valueLink1" type="hidden" value="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/573602280%3Fsecret_token%3Ds-ZJW0t&amp;color=%230556d2&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"> -->
+                                            <!-- <a class="btn btn-dark btn-hover mr-3" id="copyLink1" data-clipboard-demo="" data-clipboard-action="copy" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">Copy Link</a> -->
+                                            <a class="btn btn-dark btn-hover mr-3" data-dismiss="modal">Close</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_element">
+                            <h4>
+                                <a href="https://productcoalition.com/how-a-product-leader-can-make-better-and-faster-decisions-af0c4fa386d8" target="_blank"><span class="tile-content"> How a Product Leader Can Make Better and Faster Decisions.<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://productcoalition.com" target="_blank" class="byline__prefix">Product Coalition</a>
+                            </div>
+                            <hr class="pLine">
+                            <div class="modal fade" id="modalPodcast3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body mb-0 p-0 modal-height">
+                                            <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                                <iframe id="podcast-playlist" src="https://omny.fm/shows/product-to-product-podcast/playlists/podcast/embed?style=cover&amp;list=0&amp;selectedClip=64b3a563-bae6-4f0f-ba1c-aaf8012afa3d" width="100%" height="130" frameborder="0"></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <!-- <input id="valueLink1" type="hidden" value="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/573602280%3Fsecret_token%3Ds-ZJW0t&amp;color=%230556d2&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"> -->
+                                            <!-- <a class="btn btn-dark btn-hover mr-3" id="copyLink1" data-clipboard-demo="" data-clipboard-action="copy" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">Copy Link</a> -->
+                                            <a class="btn btn-dark btn-hover mr-3" data-dismiss="modal">Close</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-15">
+                        <a class="btn btn-dark btn-hover mr-3" href="#">Listen All Podcasts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section> 
+        <section id="blog" class="bg-lightgray py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="section-title text-center m-auto pb-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1">Latest Collection</h5>
+                            <h2 class="text-uppercase mb-0 color-black">Blogs</h2>
+                        </div>
+                        <div class="content_element">
+                            <hr class="pLine">
+                            <h4>
+                                <a href="https://productcoalition.com/how-a-product-leader-can-make-better-and-faster-decisions-af0c4fa386d8" target="_blank"><span class="tile-content"> How a Product Leader Can Make Better and Faster Decisions<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://productcoalition.com/" target="_blank" class="byline__prefix">Product Coadlition</a>
+                            </div>
+                            <hr class="pLine">
+                        </div>
+                        <div class="content_element">
+                            <h4>
+                                <a href="https://medium.com/pminsider/6-types-of-product-analytics-tools-your-stack-needs-59c7d520d94b?source=rss----f6b05f5c9120---4" target="_blank"><span class="tile-content"> Six Types of Product Analytics Tools Your Stack Needs<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://medium.com/" target="_blank" class="byline__prefix">Medium</a>
+                            </div>
+                            <hr class="pLine">
+                        </div>
+                        <div class="content_element">
+                            <h4>
+                                <a href="https://blog.aha.io/customer-persona-examples/" target="_blank"><span class="tile-content"> 8 Smart Tactics for Understanding Customer Pain Points<span></a>
+                            </h4>
+                            <div class="byline byline--post-list">
+                                <a href="https://medium.com/" target="_blank" class="byline__prefix">Medium</a>
+                            </div>
+                            <hr class="pLine">
+                        </div>
+
+                    <div class="mt-15">
+                        <a class="btn btn-dark btn-hover mr-3" href="#">Read All Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section id="contact" class="py-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="contact-image"><img src="https://pmhub.s3.us-east-2.amazonaws.com/images/contact2.jpg" alt="image"></div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="inner-title pb-30 r-mt-30">
+                            <h5 class="position-relative line d-table mx-auto px-50 color-primary letter-spacing-1" style="margin-left: unset !important;">Contact Me</h5>
+                            <h2 class="inner-bottom-title color-black">Connect With Me 24/7.</h2>
+                        </div>
+                        <form class="contact-message" id="contact-form" action="email.php" method="post">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group"> 
+                                        <input class="form-control" type="text" name="name" placeholder="Name*"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group"> <input class="form-control" type="text" name="email" placeholder="Email*"/></div>
+                                </div>
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group"> <input class="form-control" id="subject" type="text" name="subject" placeholder="Subject*"/></div>
+                                </div>
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" rows="5" name="message" placeholder="Message*"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="form-group m-0"> <input class="btn btn-dark btn-hover" id="Send" type="submit" value="Send"/></div>
+                                </div>
+                                <div class="col-md-12 col-lg-12">
+                                    <div class="error-handel">
+                                        <div id="success">Your email sent Successfully, Thank you.</div>
+                                        <div id="error"> Error occurred while sending email. Please try again later.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        <div class="bg-lightgray py-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-3">
+                                <div class="contact-info color-black">
+                                    <h4 class="color-primary letter-spacing-1 text-uppercase mb-2">Address</h4> 
+                                    <span class="tile-content">Delhi, India.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="contact-info color-black">
+                                    <h4 class="color-primary letter-spacing-1 text-uppercase mb-2">Email</h4> 
+                                    <a href="mailto:sachin.nex@gmail.com"><span class="tile-content">sachin.nex@gmail.com</span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="contact-info r-mt-30 color-black">
+                                    <h4 class="color-primary letter-spacing-1 text-uppercase mb-2">Skype</h4> 
+                                    <a href="skype:sachin.nex?userinfo">
+                                       <span class="tile-content">sachin.nex</span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-3">
+                                <div class="contact-info r-mt-30 color-black">
+                                    <h4 class="color-primary letter-spacing-1 text-uppercase mb-2">LinkedIn</h4> 
+                                    <a href="https://www.linkedin.com/in/sachinshrm/" target="_blank">
+                                       <span class="tile-content">Sachin Sharma</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 col-lg-3">
+                        <div class="socal-media r-mt-30 d-inline-block float-right">
+                            <ul>
+                                <li><a href="https://www.facebook.com/profile.php?id=100011561744449" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/3142d7aadb48444" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/sachinshrm/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient py-15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="copyright text-center color-black"> PM. <span class="color-white">@ 2020.</span> All Right Reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://pmhub.s3.us-east-2.amazonaws.com/js/jquery.min.js"></script> 
+        <script src="https://pmhub.s3.us-east-2.amazonaws.com/js/clipboard.min.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/bootstrap.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://www.themetrading.net/html/potato/js/wow.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/mixitup.min.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/jquery.fancybox.min.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/owl.carousel.min.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/YouTubePopUp.jquery.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/validate.js"></script> 
+        <script src="https://www.themetrading.net/html/potato/js/custom.js"></script> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156349032-1"></script>	
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-156349032-1');
+	</script>
+
+	<script>
+            $(".nav-link").on('click',function(event)
+            {
+                if(this.hash!==""){event.preventDefault();
+                var hash=this.hash;$('html, body').animate({
+                    scrollTop:$(hash).offset().top
+                },1000,function(){window.location.hash=hash;});}
+            });
+            $("#send").click(function() {
+                $('html,body').animate({
+                    scrollTop: $("#contact").offset().top},1000);
+            });
+            $("#modalPodcast1").on('hidden.bs.modal', function (e) {
+                $("#modalPodcast1 iframe").attr("src", $("#modalPodcast1 iframe").attr("src"));
+            });
+            $("#modalPodcast2").on('hidden.bs.modal', function (e) {
+                $("#modalPodcast2 iframe").attr("src", $("#modalPodcast2 iframe").attr("src"));
+            });
+            $("#modalPodcast3").on('hidden.bs.modal', function (e) {
+                $("#modalPodcast3 iframe").attr("src", $("#modalPodcast3 iframe").attr("src"));
+            });
+        </script> 
+    </body>
+</html>
